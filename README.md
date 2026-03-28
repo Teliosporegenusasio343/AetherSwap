@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="./web/assets/logo.png" width="120" alt="AetherSwap Logo">
 
 <h1>⚗️ AetherSwap</h1>
 
