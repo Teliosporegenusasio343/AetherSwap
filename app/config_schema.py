@@ -92,6 +92,7 @@ DEFAULTS = {
     },
     "system": {
         "exchange_rate_refresh_hours": 24,
+        "ui_scale": "0.7",
     },
     "proxy_pool": {
         "enabled": False,
