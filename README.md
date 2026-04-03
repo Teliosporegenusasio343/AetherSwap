@@ -24,7 +24,6 @@
 
 <br>
 
-<img src="./web/assets/hero_banner.png" width="800" alt="AetherSwap Console Preview">
 <br><br>
 
 > 从选品→下单→上架→确认，全程 **99% 无人工干预**；  
