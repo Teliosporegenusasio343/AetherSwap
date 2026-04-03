@@ -158,16 +158,16 @@ async function loadConfig() {
 function formToConfig() {
   return {
     iflow: {
-      games: (el("cfg-games")?.value.trim() || "") || undefined,
-      platforms: (el("cfg-platforms")?.value.trim() || "") || undefined,
-      sort_by: (el("cfg-sort_by")?.value.trim() || "") || undefined,
+      games: el("cfg-games") ? el("cfg-games").value.trim() : undefined,
+      platforms: el("cfg-platforms") ? el("cfg-platforms").value.trim() : undefined,
+      sort_by: el("cfg-sort_by") ? el("cfg-sort_by").value.trim() : undefined,
       min_price: el("cfg-min_price") ? parseFloat(el("cfg-min_price").value) || undefined : undefined,
       max_price: el("cfg-max_price") ? parseFloat(el("cfg-max_price").value) || undefined : undefined,
       min_volume: el("cfg-min_volume") ? parseInt(el("cfg-min_volume").value, 10) || undefined : undefined,
     },
     buff: {
       pay_method: el("cfg-pay_method") ? el("cfg-pay_method").value : undefined,
-      game: (el("cfg-buff-game")?.value.trim() || "") || undefined,
+      game: el("cfg-buff-game") ? el("cfg-buff-game").value.trim() : undefined,
       price_tolerance: el("cfg-price_tolerance") ? parseFloat(el("cfg-price_tolerance").value) || undefined : undefined,
     },
     pipeline: {
@@ -224,26 +224,26 @@ function formToConfig() {
       refresh_seconds: el("cfg-inv-refresh") ? parseInt(el("cfg-inv-refresh").value, 10) || undefined : undefined,
     },
     notify: {
-      pushplus_token: (el("cfg-pushplus_token")?.value || "").trim() || undefined,
+      pushplus_token: el("cfg-pushplus_token") ? el("cfg-pushplus_token").value.trim() : undefined,
       holdings_report_interval_hours: el("cfg-holdings_report_interval_hours") ? parseInt(el("cfg-holdings_report_interval_hours").value, 10) : undefined,
       holdings_report_change_threshold_pct: el("cfg-holdings_report_change_threshold_pct") ? parseFloat(el("cfg-holdings_report_change_threshold_pct").value) : undefined,
       holdings_report_drop_enabled: el("cfg-holdings-drop-enabled") ? !!el("cfg-holdings-drop-enabled").checked : undefined,
-      email_user: (el("cfg-email_user")?.value || "").trim() || undefined,
-      email_pass: (el("cfg-email_pass")?.value || "").trim() || undefined,
-      imap_server: (el("cfg-imap_server")?.value || "").trim() || undefined,
-      target_sender: (el("cfg-target_sender")?.value || "").trim() || undefined,
-      allowed_sender: (el("cfg-allowed_sender")?.value || "").trim() || undefined,
-      subject_success: (el("cfg-subject_success")?.value || "").trim() || undefined,
-      subject_fail: (el("cfg-subject_fail")?.value || "").trim() || undefined,
+      email_user: el("cfg-email_user") ? el("cfg-email_user").value.trim() : undefined,
+      email_pass: el("cfg-email_pass") ? el("cfg-email_pass").value.trim() : undefined,
+      imap_server: el("cfg-imap_server") ? el("cfg-imap_server").value.trim() : undefined,
+      target_sender: el("cfg-target_sender") ? el("cfg-target_sender").value.trim() : undefined,
+      allowed_sender: el("cfg-allowed_sender") ? el("cfg-allowed_sender").value.trim() : undefined,
+      subject_success: el("cfg-subject_success") ? el("cfg-subject_success").value.trim() : undefined,
+      subject_fail: el("cfg-subject_fail") ? el("cfg-subject_fail").value.trim() : undefined,
       email_timeout_seconds: el("cfg-email_timeout_seconds") ? parseInt(el("cfg-email_timeout_seconds").value, 10) || undefined : undefined,
     },
     steam_guard: {
-      shared_secret: (el("cfg-steam-shared-secret")?.value || "").trim() || undefined,
+      shared_secret: el("cfg-steam-shared-secret") ? el("cfg-steam-shared-secret").value.trim() : undefined,
     },
     steam_confirm: {
       enabled: !!el("cfg-steam-auto-confirm")?.checked,
-      identity_secret: (el("cfg-steam-identity-secret")?.value || "").trim() || undefined,
-      device_id: (el("cfg-steam-device-id")?.value || "").trim() || undefined,
+      identity_secret: el("cfg-steam-identity-secret") ? el("cfg-steam-identity-secret").value.trim() : undefined,
+      device_id: el("cfg-steam-device-id") ? el("cfg-steam-device-id").value.trim() : undefined,
     },
     system: {
       exchange_rate_refresh_hours: el("cfg-exchange-refresh-hours") ? parseFloat(el("cfg-exchange-refresh-hours").value) || undefined : undefined,
