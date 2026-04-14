@@ -20,6 +20,8 @@ async function loadConfig() {
   if (gMinPrice) gMinPrice.value = i.min_price ?? "";
   const gMaxPrice = el("cfg-max_price");
   if (gMaxPrice) gMaxPrice.value = i.max_price ?? "";
+  const gMinVolume = el("cfg-min_volume");
+  if (gMinVolume) gMinVolume.value = i.min_volume ?? "";
   const gPay = el("cfg-pay_method");
   if (gPay) gPay.value = (b.pay_method || "wechat").toLowerCase();
   const gTarget = el("cfg-target_balance");
