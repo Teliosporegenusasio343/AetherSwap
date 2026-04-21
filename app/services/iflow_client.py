@@ -28,8 +28,14 @@ class IflowClient:
             )
         return asyncio.run(_do_fetch())
 def fetch_iflow_rows(config: dict) -> List[Any]:
+    import math
+    
     iflow_cfg = config.get("iflow", {})
+    pipeline_cfg = config.get("pipeline", {})
+    top_n = int(pipeline_cfg.get("iflow_top_n", 50) or 50)
+    
     client = IflowClient(timeout_sec=int(iflow_cfg.get("fetch_timeout", iflow_fetch_timeout)))
+    
     params = {
         "page_num": iflow_cfg.get("page_num", 1),
         "platforms": iflow_cfg.get("platforms", "buff-c5"),
@@ -41,4 +47,29 @@ def fetch_iflow_rows(config: dict) -> List[Any]:
         "max_latency": iflow_cfg.get("max_latency", 0),
         "price_mode": iflow_cfg.get("price_mode", "buy"),
     }
-    return client.fetch(params, headless=True)
+    
+    if top_n <= 0:
+        target_pages = 1
+    else:
+        target_pages = math.ceil(top_n / 50.0)
+
+    all_rows = []
+    start_page = int(params["page_num"])
+    
+    for page_offset in range(target_pages):
+        current_page = start_page + page_offset
+        params["page_num"] = current_page
+        
+        page_rows = client.fetch(params, headless=True)
+        if not page_rows:
+            break
+            
+        all_rows.extend(page_rows)
+        
+        if len(page_rows) < 50:
+            break
+            
+        if top_n > 0 and len(all_rows) >= top_n:
+            break
+            
+    return all_rows

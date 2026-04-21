@@ -285,12 +285,7 @@ def api_sync_sold_from_history():
         return {"ok": False, "error": str(e)[:200]}
 @router.post("/api/repair_error_records")
 def api_repair_error_records():
-    import sys
-    from pathlib import Path
-    root = Path(__file__).resolve().parent.parent.parent
-    if str(root) not in sys.path:
-        sys.path.insert(0, str(root))
-    from scripts.repair_error_records import run as run_repair
+    from app.repair_error_records import run as run_repair
     def log_fn(msg: str, level: str = "info"):
         log(msg, level, category="repair")
     try:
